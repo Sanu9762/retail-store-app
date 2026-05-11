@@ -2,8 +2,8 @@ name: Deploy
 
 on:
     push:
-        branches: [ gitops ]
-        paths: [ "src/**" ]
+        branches: [gitops]
+        paths: ["src/**"]
     workflow_dispatch:
 
 env:
@@ -210,7 +210,7 @@ jobs:
     summary:
         name: Deployment Summary
         runs-on: ubuntu-latest
-        needs: [ detect-changes, deploy ]
+        needs: [detect-changes, deploy]
         if: always()
         steps:
             - name: Create deployment summary
